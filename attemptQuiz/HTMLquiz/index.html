@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./questionQuiz.js" defer></script>
+    <script src="./quiz.js" defer></script>
+
+    <title>HTML Quiz</title>
+  </head>
+  <body class="body">
+    <div id="header">
+      <nav class="navbar">
+        <a href="#" class="navbar-brand">
+          <img src="../../assects/logo.png" width="100" />
+        </a>
+        <div class="login-text"><span> V 2.0 BETA</span></div>
+      </nav>
+    </div>
+    <div class="quizContainer">
+      <div class="quaiz-box">
+        <h2 class="quaiz-text"></h2>
+        <div class="options">
+          <!-- <div class="option">A: hyper text multipal language</div>
+          <div class="option">B: hyper text preprecessor</div>
+          <div class="option">C: hyper text multipal language</div>
+          <div class="option">D: hyper text markup language</div> -->
+        </div>
+        <div class="quaiz-footer">
+          <div class="quaiz-left">
+            <span class="cunt-que"></span> of
+            <span class="total-que"></span> question
+          </div>
+          <div class="quaiz-right">
+            <div class="next-btn" onclick="NextQue()">Next Question</div>
+          </div>
+        </div>
+      </div>
+      <div class="result-box inactive">
+        <h2>result</h2>
+        <div class="result">
+          <h3 class="total-que">total question : <span></span></h3>
+          <h3 class="right-ans">rigth answer : <span></span></h3>
+          <h3 class="wrong-ans">wrong answer : <span></span></h3>
+          <h3 class="percentage">percentage : <span></span></h3>
+        </div>
+        <div class="result-btn">
+          <button class="next-btn" onclick="BackToQuiz()">Back To Quiz</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 80px !important;
+  background-color: #fff !important;
+  box-shadow: 0px 10px 5px #dadedf7d;
+  padding-left: 40px !important;
+  padding-right: 20px !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 0;
+  position: relative;
+}
+.logOut {
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.quizContainer {
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+}
+#userName {
+  color: #0d6db7;
+  font-size: 2.5rem;
+  margin-bottom: 17px;
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: initial;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.quizBox {
+  display: flex;
+}
+.col {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.heading {
+  margin: 0 0 1.5rem 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+.attemptBtn {
+  opacity: 1;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(13, 109, 183);
+  color: rgb(13, 109, 183);
+  padding: 5px 20px;
+  border-radius: 4px;
+  font-size: 19px;
+}
+
+@media screen and (max-width: 630px) {
+  .quizBox {
+    display: flex;
+    flex-direction: column;
+  }
+  .col {
+    padding: 0;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./index.css" rel="stylesheet" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    /> -->
+    <script src="./logIn.js" defer></script>
+    <title>Attempt Quiz</title>
+  </head>
+  <body>
+    <div id="header">
+      <nav class="navbar">
+        <a href="#" class="navbar-brand">
+          <img src="../assects/logo.png" width="100" />
+        </a>
+        <div class="login-text">
+          <span> V 2.0 BETA</span>
+        </div>
+      </nav>
+    </div>
+    <div style="padding: 0rem 2rem">
+      <div class="formLayout">
+        <p class="logIntext">LogIn</p>
+        <form class="form" id="logInForm">
+          <div class="lableInput">
+            <label> Full Name </label>
+            <input
+              oninput="HandleNameError()"
+              type="text"
+              placeholder="Aqib Noor"
+              class="input"
+              id="full_name"
+            />
+            <p id="errorName" class="error">Name is required</p>
+          </div>
+          <div class="lableInput">
+            <label> Enter Email </label>
+            <input
+              oninput="HandleEmailError()"
+              type="text"
+              placeholder="abc@gmail.com"
+              class="input"
+              id="email"
+            />
+            <p id="errorEmail" class="error">Email is required</p>
+          </div>
+          <div class="lableInput">
+            <label>Enter Roll No.</label>
+            <input
+              oninput="HandleRollNoError()"
+              placeholder="WMA-56465"
+              class="input"
+              id="rollNo"
+            />
+            <p id="errorRollNo" class="error">Roll is required</p>
+          </div>
+          <div>
+            <button onclick="logIn(event)">Continue</button>
+            <button onclick="redirectHome(event)">Back To Home</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    const redirectHome = (e) => {
+      e.preventDefault();
+      window.location.href = window.location.origin;
+      console.log(window.location.origin, "original");
+    };
+  </script>
+</html>

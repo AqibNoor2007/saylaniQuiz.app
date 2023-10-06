@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+    <title>Main Page</title>
+  </head>
+  <body class="body">
+    <div id="header">
+      <nav class="navbar">
+        <a href="#" class="navbar-brand">
+          <img src="./assects/logo.png" width="100" />
+        </a>
+        <div class="login-text">
+          <span> V 2.0 BETA</span>
+        </div>
+      </nav>
+    </div>
+    <div id="content">
+      <div class="main-section">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col d-flex justify-content-center">
+              <div class="mt-50">
+                <div class="main-heading">
+                  <h1 class="color">Quiz Application</h1>
+                  <p class="main-text">Saylani Mass IT Training Program</p>
+                  <p class="lead">
+                    Saylani Mass IT Training program is an institute who
+                    delivers latest IT education (FREE OF COST).
+                  </p>
+                  <p class="lead">
+                    Saylani Mass Training Department is one of the department
+                    which is running under Saylani Welfare Trust Management.
+                  </p>
+                  <p class="lead bold">Start your <b> Quiz </b> here:</p>
+                  <div>
+                    <button class="attemptBtn" onclick="redirectLogin()">
+                      Attempt Quiz
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <h2>Contact</h2>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +1 123-456-7890</p>
+      <h2>About Us</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+        semper nulla, in ultrices ipsum.
+      </p>
+    </div>
+  </body>
+  <script>
+    const redirectLogin = () => {
+      window.location.href = "/attemptQuiz";
+    };
+  </script>
+</html>

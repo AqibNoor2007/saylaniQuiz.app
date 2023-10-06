@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./attemptQuiz.js" defer></script>
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div id="header">
+      <nav class="navbar">
+        <a href="#" class="navbar-brand">
+          <img src="../assects/logo.png" width="100" />
+        </a>
+        <div class="login-text">
+          <button class="logOut" onclick="Logout()">Log Out</button>
+        </div>
+      </nav>
+    </div>
+    <div class="quizContainer">
+      <div style="margin: 0 1rem">
+        <p id="userName"></p>
+
+        <hr />
+        <div class="quizBox">
+          <div class="html col">
+            <div class="card">
+              <p class="heading">HTML</p>
+              <button class="attemptBtn" onclick="ShowModal('HTMLModal')">
+                Attempt
+              </button>
+            </div>
+          </div>
+          <div class="css col">
+            <div class="card">
+              <p class="heading">CSS</p>
+              <button class="attemptBtn" onclick="ShowModal('CssModal')">
+                Attempt
+              </button>
+            </div>
+          </div>
+          <div class="js col">
+            <div class="card">
+              <p class="heading">JavaScript</p>
+              <button class="attemptBtn" onclick="ShowModal('JSModal')">
+                Attempt
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="JSModal"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              JavaScript Quiz
+            </h1>
+          </div>
+          <div class="modal-body">
+            <p style="font-size: 20px">
+              Once you attempt this quiz your not eligible to attempt it again.
+            </p>
+            <p>Total Question : 10</p>
+            <p>Total Marks : 100</p>
+            <p>Passing Criteria : 70%</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancle
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="GetQuiz('JSquiz')"
+            >
+              Attempt
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="CssModal"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">CSS Quiz</h1>
+          </div>
+          <div class="modal-body">
+            <p style="font-size: 20px">
+              Once you attempt this quiz your not eligible to attempt it again.
+            </p>
+            <p>Total Question : 10</p>
+            <p>Total Marks : 100</p>
+            <p>Passing Criteria : 80%</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancle
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="GetQuiz('CSSquiz')"
+            >
+              Attempt
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="HTMLModal"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">HTML Quiz</h1>
+          </div>
+          <div class="modal-body">
+            <p style="font-size: 20px">
+              Once you attempt this quiz your not eligible to attempt it again.
+            </p>
+            <p>Total Question : 10</p>
+            <p>Total Marks : 100</p>
+            <p>Passing Criteria : 80%</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancle
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="GetQuiz('HTMLquiz')"
+            >
+              Attempt
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
