@@ -1,10 +1,8 @@
-console.log(questions);
 const quaiz_box = document.querySelector(".quaiz-box");
 const que_text = quaiz_box.querySelector(".quaiz-text");
 const option_box = quaiz_box.querySelector(".options");
 const que_option = document.getElementsByClassName("option");
 const next_btn = quaiz_box.querySelector(".next-btn");
-
 const total_q = document.querySelector(".quaiz-footer .total-que");
 const count_que = document.querySelector(".quaiz-footer .cunt-que");
 const result_box = document.querySelector(".result-box");
@@ -13,15 +11,12 @@ const right_ans_r = document.querySelector(".right-ans span");
 const wrong_ans_r = document.querySelector(".wrong-ans span");
 const perc_r = document.querySelector(".percentage span");
 
-// const Result_footer = document.querySelector(".result-footer");
-// const exit = Result_footer.querySelector(".exit");
-// const again_quaiz = document.querySelector(".result-footer .again-quaiz");
-
 var questionIndex = 0;
 var answer;
 var right_ans = 0;
 var wrong_ans = 0;
 var totalMark = 100;
+var passingPerc = 80;
 total_q.innerHTML = questions.length;
 
 const QuizQuestion = (questionIndex) => {
@@ -68,8 +63,20 @@ const ShowResult = () => {
   right_ans_r.innerHTML = right_ans;
   wrong_ans_r.innerHTML = wrong_ans;
   var obtainedMark = right_ans * 10;
-  perc_r.innerText = (obtainedMark / totalMark) * 100;
-  +"%";
+  var percentage = (obtainedMark / totalMark) * 100;
+  if (percentage < passingPerc) {
+    perc_r.innerText = `${percentage}% (fail)`;
+    document.getElementById("percentage").classList.add("fail");
+  } else {
+    perc_r.innerText = `${percentage}% (Pass)`;
+    document.getElementById("percentage").classList.add("pass");
+  }
+  var user = JSON.parse(localStorage.getItem("user"));
+  var userEmail = user.email;
+  setTimeout(() => {
+    var result = [{ userEmail: { htmlQuiz: { userEmail, percentage } } }];
+    localStorage.setItem("quizResult", JSON.stringify(result));
+  }, 500);
 };
 
 const BackToQuiz = () => {

@@ -142,6 +142,12 @@
 .inactive {
   display: none;
 }
+.fail {
+  color: red !important;
+}
+.pass {
+  color: green !important;
+}
 @media screen and (max-width: 544px) {
   .quaiz-box {
     padding: 20px;
